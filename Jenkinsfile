@@ -22,6 +22,7 @@ node {
     
     stage "Push latest"
 
+        sh "docker tag ${appName}:${tag} ${appName}:latest"
         sh "docker push ${registryHost}${appName}:latest"
 
     stage "Deploy"
