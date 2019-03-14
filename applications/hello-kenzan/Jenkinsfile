@@ -20,6 +20,7 @@ node {
     stage "Push"
 
         sh "docker push ${imageName}"
+        sh "docker push ${registryHost}${appName}:latest"
 
     stage "Deploy"
 
